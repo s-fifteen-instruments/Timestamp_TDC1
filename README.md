@@ -18,7 +18,7 @@ To simplify usage and development, there are several software and repositories t
 be used.
 
 ### Python package
-The [S15lib](s-fifteen-instruments/pyS15/tree/master) python library contains classes of
+The [S15lib](https://github.com/s-fifteen-instruments/pyS15/tree/master) python library contains classes of
 S-Fifteen Instruments devices. The library also has `g2lib` which holds histogramming
 and cross-correlation functions .
 
@@ -27,7 +27,7 @@ This can be installed from via git+pip install
 pip install git+https://github.com/s-fifteen-instruments/pyS15.git@no_compile
 ```
 
-With TTL signals sent into channels 1 and 2, a quick measurement of g2 between these two
+With TTL signals sent into channels 1 and 2, a [quick](https://github.com/s-fifteen-instruments/pyS15/blob/master/examples/TDC1_g2_coincidences.py) measurement of g2 between these two
 channels can be done via
 ```python
 from S15lib.instruments import TimestampTDC1
@@ -47,32 +47,19 @@ c = ts.count_g2(
 histo = c["histogram"]
 time_ax = c["time_bins"]
 ```
+Timestamp mode collection Python [script](https://github.com/s-fifteen-instruments/pyS15/blob/master/examples/TDC1_sample_timestamp_collect.py)
 
 ### Python GUI
-A python GUI can be found [here](s-fifteen-instruments/tdc1_GUI). This GUI gives
+A python GUI can be found [here](https://github.com/s-fifteen-instruments/tdc1_GUI). This GUI gives
 real-time counter data of all four channels or cross-correlation (g2) measurement
 between any two channels.
 
 ### Labview
-
-
-
+Sample labview codes which uses the NI-VISA package to control the Timestamp can be found [here](https://github.com/s-fifteen-instruments/Timestamp_TDC/tree/master/labview)
+[Further labview information](https://github.com/s-fifteen-instruments/Timestamp_TDC1/wiki/TDC1-Documentation#user-content-Labview_Interface)
 ## Further information
 For detailed documentation on the TDC1, refer to the [wiki
 page](https://github.com/s-fifteen-instruments/Timestamp_TDC/wiki/TDC1-Documentation).
 
  
-This is a depository for sample codes that can be used with 4-Channel Time to Digital Converter.
-
 Feel free to play with the code but please credit us if you are publishing your own version.
-
-### Python Package (highly reccomended for non-GUI applications) at https://github.com/s-fifteen-instruments/pyS15
-
-Sample timestamp mode collection Python script at https://github.com/s-fifteen-instruments/pyS15/blob/master/examples/TDC1_sample_timestamp_collect.py
-
-Sample g2 correlation histogram Python script at https://github.com/s-fifteen-instruments/pyS15/blob/master/examples/TDC1_g2_coincidences.py
-
-### GUI released 2022 at https://github.com/s-fifteen-instruments/tdc1_GUI
-
-### Technical Documentation at https://github.com/s-fifteen-instruments/Timestamp_TDC1/wiki/TDC1-Documentation
-
